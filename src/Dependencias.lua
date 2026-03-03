@@ -4,5 +4,7 @@ Push = require 'lib.push'
 Class = require 'lib.class'
 
 require 'src.Constantes'
+
 require 'src.MaquinaEstado'
 require 'src.estados.EstadoBase'
+require 'src.estados.EstadoStart'

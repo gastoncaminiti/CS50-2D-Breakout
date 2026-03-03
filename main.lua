@@ -50,10 +50,10 @@ function love.load()
     })
     -- Inicializacion de MaquinaEstado
     MaquinaEstadoGlobal = MaquinaEstado {
-        --['start']   = function() return EstadoStart() end
+        ['start']   = function() return EstadoStart() end
     }
     -- Configurar Estado Inicial
-    --MaquinaEstadoGlobal:cambiar('start')
+    MaquinaEstadoGlobal:cambiar('start')
     -- Tabla de teclas presionadas
     love.keyboard.keysPressed = {}
 end
@@ -64,7 +64,7 @@ end
 
 function love.update(dt)
     -- Actualizar estado actual
-    -- MaquinaEstadoGlobal:update(dt)
+    MaquinaEstadoGlobal:update(dt)
     -- Reiniciar teclas presionadas en cada frame
     love.keyboard.keysPressed = {}
 end
@@ -90,8 +90,8 @@ function love.draw()
     -- begin drawing with push, in our virtual resolution
     Push:start()
         love.graphics.draw(Texturas['background'], 0, 0)
-
-        -- MaquinaEstadoGlobal:render()
+        -- Dibujar Estado Actual
+        MaquinaEstadoGlobal:render()
         -- display FPS for debugging; simply comment out to remove
         displayFPS()
     Push:finish()
