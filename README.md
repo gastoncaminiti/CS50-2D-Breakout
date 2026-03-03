@@ -7,3 +7,4 @@ CC BY-NC-SA 4.0
 
 ### Assets
 [Puzzle Pack](https://kenney.nl/assets/puzzle-pack) by Kenney Creative Commons CC0
+[UI Pack](https://kenney.nl/assets/ui-pack) by Kenney Creative Commons CC0
