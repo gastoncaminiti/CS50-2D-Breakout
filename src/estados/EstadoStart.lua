@@ -1,13 +1,22 @@
 EstadoStart = Class{__includes = EstadoBase}
 
-local highlighted = 1
+local resaltado = 1
 
 function EstadoStart:update(dt)
-    -- Alternar highlighted segun flecha
+    -- Alternar resaltado segun flecha
     if love.keyboard.wasPressed('up') or love.keyboard.wasPressed('down') then
-        highlighted = highlighted == 1 and 2 or 1
+        resaltado = resaltado == 1 and 2 or 1
         Sonidos['paddle-hit']:play()
     end
+    -- Confirmar opcion seleccionada
+    if love.keyboard.wasPressed('enter') or love.keyboard.wasPressed('return') then
+        Sonidos['confirm']:play()
+
+        if resaltado == 1 then
+            MaquinaEstadoGlobal:cambiar('play')
+        end
+    end
+
     -- Salir del Juego
     if love.keyboard.wasPressed('escape') then
         love.event.quit()
@@ -22,8 +31,8 @@ function EstadoStart:render()
     -- Instrucciones
     love.graphics.setFont(Fuentes['medium'])
 
-    -- If highlighted 1
-    if highlighted == 1 then
+    -- If resaltado 1
+    if resaltado == 1 then
         love.graphics.setColor(103/255, 1, 1, 1)
     end
 
@@ -33,8 +42,8 @@ function EstadoStart:render()
     -- reiniciar color
     love.graphics.setColor(1, 1, 1, 1)
 
-    -- If highlighted 2
-    if highlighted == 2 then
+    -- If resaltado 2
+    if resaltado == 2 then
         love.graphics.setColor(103/255, 1, 1, 1)
     end
     love.graphics.printf('PUNTAJES', 0, VIRTUAL_ALTO / 2 + 90,

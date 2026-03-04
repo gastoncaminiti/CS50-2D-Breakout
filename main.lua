@@ -50,7 +50,8 @@ function love.load()
     })
     -- Inicializacion de MaquinaEstado
     MaquinaEstadoGlobal = MaquinaEstado {
-        ['start']   = function() return EstadoStart() end
+        ['start']   = function() return EstadoStart() end,
+        ['play']   = function() return EstadoJugar() end
     }
     -- Configurar Estado Inicial
     MaquinaEstadoGlobal:cambiar('start')
