@@ -38,6 +38,10 @@ function love.load()
         ['pause'] = love.audio.newSource('sounds/pause.wav', 'static'),
         ['music'] = love.audio.newSource('sounds/music.wav', 'static')
     }
+    -- Inicializacion de frames
+    Frames = {
+        ['paddles'] = GenerarPaletas(Texturas['main'])
+    }
     -- Inicializacion de ventana
     Push:setupScreen(
         VIRTUAL_ANCHO,

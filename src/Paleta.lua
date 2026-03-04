@@ -8,10 +8,10 @@ function Paleta:init()
     -- empezamos sin velocidad
     self.nuevax = 0
     -- dimensiones iniciales
-    self.ancho = 64
+    self.ancho = 102
     self.alto = 16
     -- la skin solo tiene efecto de cambiar nuestra textura
-    self.skin = 1
+    self.skin = 3
 end
 
 function Paleta:update(dt)
@@ -32,7 +32,9 @@ function Paleta:update(dt)
 end
 
 function Paleta:render()
-    --love.graphics.draw(gTextures['main'], gFrames['paddles'][self.size + 4 * (self.skin - 1)],
-   --     self.x, self.y)
-   love.graphics.rectangle("fill", self.x,self.y, self.ancho,self.alto)
+    love.graphics.draw(
+        Texturas['main'], 
+        Frames['paddles'][self.skin],
+   self.x, self.y)
+   --love.graphics.rectangle("fill", self.x,self.y, self.ancho,self.alto)
 end
