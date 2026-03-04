@@ -5,6 +5,8 @@ Class = require 'lib.class'
 
 require 'src.Constantes'
 
+require 'src.Paleta'
+
 require 'src.MaquinaEstado'
 require 'src.estados.EstadoBase'
 require 'src.estados.EstadoStart'

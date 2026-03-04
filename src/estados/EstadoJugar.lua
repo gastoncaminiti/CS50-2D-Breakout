@@ -1,7 +1,7 @@
 EstadoJugar = Class{__includes = EstadoBase}
 
 function EstadoJugar:init()
-    --self.paleta = Paleta()
+    self.paleta = Paleta()
     self.pausado = false
 end
 
@@ -20,7 +20,7 @@ function EstadoJugar:update(dt)
     end
 
     -- update positions based on velocity
-    --- self.paleta:update(dt)
+    self.paleta:update(dt)
 
     if love.keyboard.wasPressed('escape') then
         love.event.quit()
@@ -28,7 +28,7 @@ function EstadoJugar:update(dt)
 end
 
 function EstadoJugar:render()
-    --self.paleta:render()
+    self.paleta:render()
 
     -- pause text, if paused
     if self.pausado then
