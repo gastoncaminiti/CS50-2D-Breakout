@@ -7,6 +7,7 @@ require 'src.Constantes'
 require 'src.Util'
 -- Importar Clases
 require 'src.Paleta'
+require 'src.Pelota'
 -- Importar Estados
 require 'src.MaquinaEstado'
 require 'src.estados.EstadoBase'

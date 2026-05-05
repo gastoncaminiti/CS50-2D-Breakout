@@ -19,7 +19,8 @@ function love.load()
         ['main'] = love.graphics.newImage('graphics/breakout.png'),
         ['arrows'] = love.graphics.newImage('graphics/arrows.png'),
         ['hearts'] = love.graphics.newImage('graphics/lives.png'),
-        ['particle'] = love.graphics.newImage('graphics/ball.png')
+        ['particle'] = love.graphics.newImage('graphics/particle.png'),
+        ['ball'] = love.graphics.newImage('graphics/ball.png')
     }
     -- Inicializacion de sonidos
     Sonidos = {

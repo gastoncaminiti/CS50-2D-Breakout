@@ -33,7 +33,7 @@ end
 
 function Paleta:render()
     love.graphics.draw(
-        Texturas['main'], 
+        Texturas['main'],
         Frames['paddles'][self.skin],
    self.x, self.y)
    --love.graphics.rectangle("fill", self.x,self.y, self.ancho,self.alto)
